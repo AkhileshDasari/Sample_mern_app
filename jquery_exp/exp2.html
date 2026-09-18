@@ -1,0 +1,27 @@
+<html>
+    <head>
+<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+<button id="dec_quan">-</button>
+<input id="quan" type="text" value="1">
+<button id="inc_quan">+</button><br/>
+<p class="price">50</p>
+<script>
+    let price=50;
+    let quantity=$("#quan").val();
+    $("#inc_quan").click(()=>{
+        quantity++;
+        $("#quan").val(quantity);
+        $(".price").html(quantity*price);
+    });
+    $("#dec_quan").click(()=>{
+        if(quantity>1){
+        quantity--;
+        $("#quan").val(quantity);
+        $(".price").html(quantity*price);
+        }
+    })
+</script>
+    </body>
+</html>
